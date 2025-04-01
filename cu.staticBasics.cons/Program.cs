@@ -1,4 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
+
+using cu.staticBasics.cons.Entities;
 using cu.staticBasics.cons.Extensions;
 
 Console.WriteLine("ExtensionMethods!");
@@ -10,5 +12,10 @@ var average = numbers.CustomAverage();
 Console.WriteLine(average);
 
 Console.WriteLine("Benten".GetFirstLetter());
+
+var personRepository = new PersonRepository();
+var person = personRepository.GetPersons().First();
+Console.WriteLine(person.GetPrefix());
+Console.WriteLine(person.GetAge());
 
 
