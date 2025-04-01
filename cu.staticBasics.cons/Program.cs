@@ -9,5 +9,6 @@ var numbers = new List<int> {1,2,3,4,56,89,78,56,2 };
 var average = numbers.CustomAverage();
 Console.WriteLine(average);
 
+Console.WriteLine("Benten".GetFirstLetter());
 
 
