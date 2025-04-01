@@ -15,11 +15,12 @@ namespace cu.staticBasics.cons.Extensions
         public static int CustomAverage(this IEnumerable<int> values)
         {
             int total = 0;
-            foreach(var value in values)
+            var enumerable = values as int[] ?? values.ToArray();
+            foreach(var value in enumerable)
             {
                 total += value;
             }
-            return total / values.Count();
+            return total / enumerable.Count();
         }
     }
 }
